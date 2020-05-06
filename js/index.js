@@ -11,12 +11,16 @@ function selects (item) {
 let selectAll = select ("*");
 let container = select (".container");
 let header = select ("header");
+let navLinks = selects (".nav-link");
 let intro = select (".intro");
 let content1 = select (".content-section");
 let content2 = select (".inverse-content");
 let contentDestination = select (".content-destination");
 let contentPick = select (".content-pick");
+let btns = selects (".btn");
 let btn = select (".btn");
+let btn2 = btns[1];
+let btn3 = btns[2];
 let footer = select ("footer");
 
 
@@ -33,6 +37,22 @@ function blackBackground (event) {
     document.firstElementChild.style.backgroundColor = "black";
 }
 btn.addEventListener("click", blackBackground);
+
+
+
+function secondBtn (event) {
+    document.firstElementChild.style.backgroundColor = "teal";
+}
+btn2.addEventListener("click", secondBtn);
+
+
+
+function thirdBtn (event) {
+    document.firstElementChild.style.backgroundColor = "coral";
+}
+btn3.addEventListener("click", thirdBtn);
+
+
 
 
 function removeHeader (event) {
@@ -70,7 +90,7 @@ document.addEventListener("languagechange", displayNone);
 function maxWidth (event) {
     container.style.maxWidth = "auto";
 }
-document.addEventListener("pointermove", maxWidth);
+window.addEventListener("pointermove", maxWidth);
 
 
 
@@ -96,11 +116,9 @@ function blueBackground (event) {
 document.addEventListener("scroll", blueBackground);
 
 
+
 function whiteBackground (event) {
     selectAll.style.backgroundColor = "white";
 }
 document.addEventListener("wheel", whiteBackground);
 
-
-
-debugger
